@@ -3,3 +3,5 @@ Using JSP + JQuery + Servlet + Mysql.
 Contains:
 1.Student register.
 2.Student manager.
+3.Student status checking.
+4.Enrolled Student listing.
