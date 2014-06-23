@@ -5,3 +5,7 @@ Contains:
 2.Student manager.
 3.Student status checking.
 4.Enrolled Student listing.
+
+###################################################
+1.create table with 'src/enroll.sql'
+2.modified url/user/password in 'dbutil.GetConnection.java' 

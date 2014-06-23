@@ -1,6 +1,5 @@
 package dao;
 
-import getConnection.GetConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,6 +9,8 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import dbuitl.GetConnection;
 
 import bean.Student;
 
