@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="EnrollSystem"
+  id="myeclipse.1366777050237"
+  context-root="/Enroll"
+  j2ee-spec="5.0"
+  archive="EnrollSystem.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+
