@@ -5,7 +5,20 @@ Contains:
 2.Student manager.
 3.Student status checking.
 4.Enrolled Student listing.
+5.export excel.
 
 ###################################################
 1.create table with 'src/enroll.sql'
 2.modified url/user/password in 'dbutil.GetConnection.java' 
+
+##################################################
+1.register
+http://localhost:8080/enroll/zregister.jsp
+2.manager
+http://localhost:8080/enroll/UUServlet
+3.list
+http://localhost:8080/enroll/AAListServlet
+4.check status
+http://localhost:8080/enroll/zsearch.jsp
+5.export excel
+the some at : http://localhost:8080/enroll/UUServlet

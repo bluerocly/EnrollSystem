@@ -3,7 +3,7 @@
   type="WEB"
   name="EnrollSystem"
   id="myeclipse.1366777050237"
-  context-root="/Enroll"
+  context-root="/enroll"
   j2ee-spec="5.0"
   archive="EnrollSystem.war">
   <attributes>
