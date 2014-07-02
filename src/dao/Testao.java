@@ -26,6 +26,9 @@ public class Testao {
 	public void denyStudent(String id) {
 		updateStatus(id, "D");
 	}
+	public void ptStudent(String id) {
+		updateStatus(id, "P");
+	}
 	
 	void updateStatus(String id,String status) {
 		try {
@@ -82,10 +85,10 @@ public class Testao {
 	}
 	
 	public List<Student> getAllStudents() {
-		return getStudents("");
+		return getStudents(" order by addtime");
 	}
 	public List<Student> getAcceptedStudents() {
-		return getStudents("where isAccept = 'Y'");
+		return getStudents("where isAccept = 'Y' or isAccept = 'P' order by isAccept desc");
 	}
 	
 	public String getStatusById(String tidcard, String ttel) {
@@ -103,7 +106,7 @@ public class Testao {
 		ResultSet rs = null;
 		try {
 			conn = GetConnection.getConnection();
-			sql = "select id,name,sex,type,school,academy,major,grade,research,email,tel,teacher,idcard,isAccept,addtime from cms_register_student " + whereSql + " order by addtime";
+			sql = "select id,name,sex,type,school,academy,major,grade,research,email,tel,teacher,idcard,isAccept,addtime from cms_register_student " + whereSql;
 			pstat = conn.prepareStatement(sql);
 			rs = (ResultSet) pstat.executeQuery();
 			while(rs.next()) {
@@ -124,9 +127,11 @@ public class Testao {
 				String status = rs.getString("isAccept");
 				stu.setIsAcceptInner(status);
 				if("Y".equalsIgnoreCase(status)) {
-					stu.setIsAccept("<font color='green'>已录取</font>");
+					stu.setIsAccept("<font color='green'>正式学员</font>");
 				} else if("D".equalsIgnoreCase(status)) {
 					stu.setIsAccept("未录取");
+				} else if("P".equalsIgnoreCase(status)) {
+					stu.setIsAccept("旁听学员");
 				} else {
 					stu.setIsAccept("<font color='red'>未审核</font>");
 				}

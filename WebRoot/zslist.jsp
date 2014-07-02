@@ -37,7 +37,7 @@ table.gridtable td {
 		 <div align="left"><h1>录取学员名单</h1></div>
 		</div><table class="gridtable" width="100%" height="100%" align="center" style="margin-top: 20px;">
 <tr>
-	<th>姓名</th><th>学校/工作单位</th><th>专业</th><th>研究方向</th>
+	<th>姓名</th><th>学校/工作单位</th><th>专业</th><th>录取类型</th>
 </tr>
 
 			<% for(Student st : list) { %>
@@ -52,8 +52,8 @@ table.gridtable td {
 					<%=st.getMajor() %>
 				</td>				
 				<td>
-					<%=st.getResearch() %>
-				</td>
+					<%=st.getIsAccept() %>
+				</td>				
 			</tr>
 			<% }%>
 		</table>

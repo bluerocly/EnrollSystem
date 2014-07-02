@@ -20,6 +20,10 @@ function updateD(keyword)
 {
 	window.location.href = "UUServlet?method=updateD&id=" + keyword;
 }
+function updatePT(keyword)
+{
+	window.location.href = "UUServlet?method=updatePT&id=" + keyword;
+}
 function del(keyword)
 {
 	window.location.href = "UUServlet?method=delete&id="+keyword;
@@ -119,7 +123,7 @@ function del(keyword)
 				<td>
 					<%=st.getIsAccept() %>
 				</td>				
-				<td><a  href="javascript:update('<%=st.getId()%>')">录取</a> <a  href="javascript:updateD('<%=st.getId()%>')">不录取</a>　<a href="javascript:del('<%=st.getId()%>')">删除</a></td>
+				<td><a  href="javascript:update('<%=st.getId()%>')">正式学员</a> <a  href="javascript:updatePT('<%=st.getId()%>')">旁听学员</a> <a  href="javascript:updateD('<%=st.getId()%>')">不录取</a>　<a href="javascript:del('<%=st.getId()%>')">删除</a></td>
 			</tr>
 			<% } }%>
 		</table>

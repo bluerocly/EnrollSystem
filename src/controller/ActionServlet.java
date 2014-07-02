@@ -31,9 +31,11 @@ public class ActionServlet extends HttpServlet {
 				msg = "学员未报名或查询信息不正确，请核对！";
 			} else{
 				if("Y".equalsIgnoreCase(status)) {
-					msg = "已录取!";
+					msg = "已录取为正式学员!";
 				} else if("N".equalsIgnoreCase(status)) {
 					msg = "报名已成功，正在录取审核中！";
+				} else if("P".equalsIgnoreCase(status)) {
+					msg = "已录取为旁听学员！";
 				} else if("D".equalsIgnoreCase(status)) {
 					msg = "未被录取，谢谢关注！";
 				} else {

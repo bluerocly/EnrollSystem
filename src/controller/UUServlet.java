@@ -34,6 +34,9 @@ public class UUServlet extends HttpServlet {
 		} else if("updateD".equalsIgnoreCase(method)) {
 			testao.denyStudent(id);
 		}
+		else if("updatePT".equalsIgnoreCase(method)) {
+			testao.ptStudent(id);
+		}
 		list = testao.getAllStudents();
 		req.setAttribute("list", list);
 		if("excel".equalsIgnoreCase(method)) {
